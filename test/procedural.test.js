@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { positiveModulo, sampleTerrainHeight, sampleCaveDensity, wrapToLoopingChunk, CELL_SIZE } from '../src/procedural.js';
+import { positiveModulo, sampleTerrainHeight, wrapToLoopingChunk, CELL_SIZE } from '../src/procedural.js';
+import { sampleCaveDensity } from '../src/engine/cave-math.js';
 
 test('positiveModulo wraps negatives and positives', () => {
   assert.equal(positiveModulo(-1, 10), 9);
@@ -23,4 +24,10 @@ test('looping chunk wrapping stays inside bounds', () => {
 test('cave density stays finite', () => {
   const density = sampleCaveDensity(10, -5, 20);
   assert.equal(Number.isFinite(density), true);
+});
+
+test('cave density varies across space', () => {
+  const d0 = sampleCaveDensity(0, 0, 0);
+  const d1 = sampleCaveDensity(20, -10, 15);
+  assert.notEqual(d0, d1);
 });

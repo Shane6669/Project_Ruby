@@ -27,7 +27,9 @@
       }
       #ui p { margin: 0.3rem 0 0; font-size: 0.75rem; opacity: 0.9; }
     </style>
-    <script type="module" crossorigin src="/assets/index-DK2GAbNN.js"></script>
+    <script type="module" crossorigin src="/assets/index-B-BWrzmJ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/three-ByMNIyko.js">
+    <link rel="modulepreload" crossorigin href="/assets/cannon-D3A3Ggxi.js">
   </head>
   <body>
     <section id="ui">
@@ -49,6 +51,10 @@
         </select>
       </label>
       <label>
+        <input id="terrain-wireframe" type="checkbox" checked />
+        Wireframe terrain
+      </label>
+      <label>
         Add model (primitive)
         <select id="model-type">
           <option value="box">Box</option>
@@ -56,8 +62,12 @@
           <option value="capsule">Capsule</option>
         </select>
       </label>
+      <label>
+        Model colour
+        <input id="model-color" type="color" value="#d6dde8" />
+      </label>
       <button id="spawn-model" type="button">Spawn in front of camera</button>
-      <p>Click viewport to lock mouse. Move with WASD + mouse look.</p>
+      <p>Click viewport to lock mouse · WASD move · Space/Shift up/down</p>
     </section>
   </body>
 </html>

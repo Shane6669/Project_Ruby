@@ -48,6 +48,10 @@
         </select>
       </label>
       <label>
+        <input id="terrain-wireframe" type="checkbox" checked />
+        Wireframe terrain
+      </label>
+      <label>
         Add model (primitive)
         <select id="model-type">
           <option value="box">Box</option>
@@ -55,8 +59,12 @@
           <option value="capsule">Capsule</option>
         </select>
       </label>
+      <label>
+        Model colour
+        <input id="model-color" type="color" value="#d6dde8" />
+      </label>
       <button id="spawn-model" type="button">Spawn in front of camera</button>
-      <p>Click viewport to lock mouse. Move with WASD + mouse look.</p>
+      <p>Click viewport to lock mouse · WASD move · Space/Shift up/down</p>
     </section>
     <script type="module" src="/src/main.js"></script>
   </body>
