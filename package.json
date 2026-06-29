@@ -1,0 +1,31 @@
+{
+  "name": "project_ruby",
+  "version": "1.0.0",
+  "description": "3D Game Engine",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shane6669/Project_Ruby.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shane6669/Project_Ruby/issues"
+  },
+  "homepage": "https://github.com/Shane6669/Project_Ruby#readme",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "three": "^0.185.0"
+  },
+  "devDependencies": {
+    "vite": "^8.1.0"
+  },
+  "type": "module"
+}
