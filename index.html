@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Ruby - Procedural Engine</title>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; overflow: hidden; font-family: system-ui, sans-serif; }
+      #ui {
+        position: fixed;
+        top: 0.75rem;
+        left: 0.75rem;
+        background: rgba(0, 0, 0, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+        padding: 0.75rem;
+        width: 300px;
+        z-index: 10;
+      }
+      #ui h1 { margin: 0 0 0.5rem; font-size: 1rem; }
+      #ui label { display: block; margin-top: 0.35rem; font-size: 0.85rem; }
+      #ui input, #ui select, #ui button {
+        width: 100%;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+      }
+      #ui p { margin: 0.3rem 0 0; font-size: 0.75rem; opacity: 0.9; }
+    </style>
+  </head>
+  <body>
+    <section id="ui">
+      <h1>Project Ruby Editor</h1>
+      <label>
+        Terrain height
+        <input id="terrain-height" type="range" min="8" max="45" value="24" />
+      </label>
+      <label>
+        Terrain roughness
+        <input id="terrain-roughness" type="range" min="4" max="30" value="12" />
+      </label>
+      <label>
+        Terrain texture style
+        <select id="terrain-style">
+          <option value="realistic">Realistic</option>
+          <option value="desert">Desert</option>
+          <option value="frost">Frost</option>
+        </select>
+      </label>
+      <label>
+        <input id="terrain-wireframe" type="checkbox" checked />
+        Wireframe terrain
+      </label>
+      <label>
+        Add model (primitive)
+        <select id="model-type">
+          <option value="box">Box</option>
+          <option value="sphere">Sphere</option>
+          <option value="capsule">Capsule</option>
+        </select>
+      </label>
+      <label>
+        Model colour
+        <input id="model-color" type="color" value="#d6dde8" />
+      </label>
+      <button id="spawn-model" type="button">Spawn in front of camera</button>
+      <p>Click viewport to lock mouse · WASD move · Space/Shift up/down</p>
+    </section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
